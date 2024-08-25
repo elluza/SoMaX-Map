@@ -1,0 +1,81 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 35px;
+}
+
+h1 .highlight {
+    color: #fe5b92; /* Pinkki väri SoMaX-sanalle */
+}
+
+#container {
+    text-align: center;
+    background-color: #003344cc; /* Tumma tausta ja läpinäkyvyys */
+    padding: 40px; /* Suurempi padding */
+    border-radius: 10px;
+    z-index: 1000;
+    width: 500px; /* Asetetaan kiinteä leveys */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Suurempi väli painikkeiden välillä */
+}
+
+button {
+    padding: 20px 40px; /* Suuremmat painikkeet */
+    font-size: 18px; /* Suurempi fonttikoko */
+}
+
+
+button:hover {
+    background-color: #fe5b92; /* Vaihda hover-väri */
+    color: white;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none; /* Estää interaktiivisuuden aluksi */
+}
+
+#map.interactive {
+    pointer-events: auto; /* Mahdollistaa interaktiivisuuden kun luokka lisätään */
+}
+
+.leaflet-control-zoom {
+    display: none; /* Piilotetaan zoom-napit aluksi */
+}
+
+#map.interactive .leaflet-control-zoom {
+    display: block; /* Näytetään zoom-napit kun kartasta tulee interaktiivinen */
+}
+
+#logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px; /* Suurempi leveys */
+    height: auto; /* Säilyttää kuvasuhteen */
+    z-index: 1000;
+}
+
